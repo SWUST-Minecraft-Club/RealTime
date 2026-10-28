@@ -1,0 +1,8 @@
+plugins { id 'xyz.jpenilla.run-paper' version '3.1.0' }
+apply from: './gradle/plugin.gradle'
+// RealTime：在主菜单里显示当前时间。
+// 它是 MainMenu 的功能插件（compileOnly 依赖 MainMenu 工程，运行期由服务端提供）。
+
+dependencies {
+    compileOnly files(rootProject.file('libs/MainMenu-mc26.3-plugin-1.10.1-beta.1.jar'))
+}
